@@ -1,6 +1,6 @@
 {
   "name": "react-moment-hooks",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React hooks for dealing with the Moment.js library.",
   "author": "Anton Bagdatyev (Tonix)",
   "license": "MIT",
