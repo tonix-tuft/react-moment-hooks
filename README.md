@@ -7,17 +7,36 @@ React hooks for dealing with the Moment.js library.
 ## Install
 
 ```bash
-npm install --save react-moment-hooks
+npm install --save moment react-moment-hooks
 ```
 
 ## Usage
 
 ```jsx
 import React from "react";
-import ExampleComponent from "react-moment-hooks";
+import { useLocale } from "react-moment-hooks";
 
-function Example() {
-  return <ExampleComponent text="React Library Template" />;
+function Example({ locale }) {
+  useLocale(
+    locale,
+    () => {
+      // Do something with loaded locale.
+      console.log(locale);
+    },
+    (e) => {
+      // Do something when locale could not be loaded.
+      console.error(e);
+    }
+  );
+  return <div />;
+}
+
+export default function App() {
+  return (
+    <div>
+      <Example locale="ru" />
+    </div>
+  );
 }
 ```
 
