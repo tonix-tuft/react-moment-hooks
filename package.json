@@ -25,7 +25,7 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "mkdir-build": "mkdir -p ./dist && mkdir -p ./module",
+    "mkdir-build": "mkdir -p ./dist",
     "prepare": "npm run mkdir-build && npm run clear-build && npm run build",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",

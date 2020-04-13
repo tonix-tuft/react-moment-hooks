@@ -12,6 +12,8 @@ npm install --save moment react-moment-hooks
 
 ## Usage
 
+### `useLocale` hook
+
 ```jsx
 import React from "react";
 import { useLocale } from "react-moment-hooks";
