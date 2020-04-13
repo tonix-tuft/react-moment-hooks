@@ -101,6 +101,7 @@
   ],
   "dependencies": {
     "immutable-linked-ordered-map": "^1.7.0",
+    "moment-utl": "^1.1.0",
     "react-js-utl": "^1.39.0"
   }
 }

@@ -25,6 +25,7 @@
 
 import { useEffect } from "react";
 import { useCallbackRef } from "react-js-utl/hooks";
+import { importLocale } from "moment-utl";
 
 /**
  * Hook to use an asynchronously loaded moment locale.
@@ -42,14 +43,13 @@ export default function useLocale(locale, callback, errorCallback = void 0) {
   const callbackRef = useCallbackRef(callback);
   const errorCallbackRef = useCallbackRef(errorCallback);
   useEffect(() => {
-    const loadLocale = async (locale) => {
+    (async () => {
       try {
-        await import(`moment/locale/${locale}`);
+        await importLocale(locale);
         callbackRef.current(locale);
       } catch (e) {
         errorCallbackRef.current && errorCallbackRef.current(e, locale);
       }
-    };
-    loadLocale(locale);
+    })();
   }, [locale, callbackRef, errorCallbackRef]);
 }
