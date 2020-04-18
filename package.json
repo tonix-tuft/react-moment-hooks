@@ -40,7 +40,8 @@
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
-    "moment": "^2.0.0"
+    "moment": "^2.0.0",
+    "moment-utl": "^2.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -85,6 +86,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.1.1",
     "moment": "^2.24.0",
+    "moment-utl": "^2.1.0",
     "node-sass": "^4.13.1",
     "onchange": "^6.1.0",
     "react": "^16.13.1",
@@ -101,7 +103,6 @@
   ],
   "dependencies": {
     "immutable-linked-ordered-map": "^1.7.0",
-    "moment-utl": "^2.1.0",
     "react-js-utl": "^1.39.0"
   }
 }
