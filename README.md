@@ -7,7 +7,7 @@ React hooks for dealing with the Moment.js library.
 ## Install
 
 ```bash
-npm install --save moment react-moment-hooks
+npm install --save moment moment-utl react-moment-hooks
 ```
 
 ## Usage
