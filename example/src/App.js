@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocale } from "react-moment-hooks";
-import { allSupportedLocales } from "moment-utl";
+import { allSupportedLocales, allSupportedLocalesMap } from "moment-utl";
 
 function Example({ locale }) {
   useLocale(locale, {
@@ -39,6 +39,11 @@ export default function App() {
       <div>
         <pre>
           <code>{JSON.stringify(allSupportedLocales(), void 0, 4)}</code>
+        </pre>
+      </div>
+      <div>
+        <pre>
+          <code>{JSON.stringify(allSupportedLocalesMap(), void 0, 4)}</code>
         </pre>
       </div>
     </div>
