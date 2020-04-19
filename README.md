@@ -20,7 +20,7 @@ import { useLocale } from "react-moment-hooks";
 
 function Example({ locale }) {
   useLocale(locale, {
-    callback: (normalizedLocale) => {
+    callback: normalizedLocale => {
       // Do something with the loaded normalized locale.
       // This callback will be called when the given locale is either known or unknown.
       //
@@ -37,7 +37,7 @@ function Example({ locale }) {
       // as first parameter.
       console.log(defaultLocale, locale);
     },
-    errorCallback: (e) => {
+    errorCallback: e => {
       // Do something when locale could not be loaded.
       console.error(e);
     },

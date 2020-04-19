@@ -4,7 +4,7 @@ import { allSupportedLocales, allSupportedLocalesMap } from "moment-utl";
 
 function Example({ locale }) {
   useLocale(locale, {
-    callback: (normalizedLocale) => {
+    callback: normalizedLocale => {
       // Do something with the loaded normalized locale.
       // This callback will be called when the given locale is either known or unknown.
       //
@@ -23,7 +23,7 @@ function Example({ locale }) {
       // eslint-disable-next-line no-console
       console.log(defaultLocale, locale);
     },
-    errorCallback: (e) => {
+    errorCallback: e => {
       // Do something when locale could not be loaded.
       // eslint-disable-next-line no-console
       console.error(e);
