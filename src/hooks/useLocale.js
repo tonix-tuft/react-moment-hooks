@@ -36,7 +36,9 @@ import { importLocale } from "moment-utl";
  * @param {(locale: string) => *} obj.callback The callback to execute once the locale has been loaded.
  *                                             Note that the callback will be re-executed only
  *                                             when the given locale parameter changes from the previous one.
- * @param {()} unknownLocaleCallback
+ * @param {undefined|(normalizedLocale: string, locale: string) => *} [unknownLocaleCallback] A callback called with the Moment's default locale (USA's English, i.e. "en")
+ *                                                                                            if the given locale is unknown as its first parameter and the given locale as the second parameter.
+ *                                                                                            See the "unknownLocaleCallback" parameter of the "importLocale" function of the "moment-utl" package.
  * @param {undefined|(e: Error, locale: string) => *} [obj.errorCallback] An optional callback to execute when the locale
  *                                                                        cannot be loaded (e.g. Moment locale chunk file not found or network error).
  * @return {undefined}
