@@ -86,8 +86,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.1.1",
     "moment": "^2.24.0",
-    "moment-utl": "^2.4.1",
-    "node-sass": "^4.13.1",
+    "moment-utl": "^2.6.0",
+    "node-sass": "^4.14.0",
     "onchange": "^6.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -103,6 +103,6 @@
   ],
   "dependencies": {
     "immutable-linked-ordered-map": "^1.8.0",
-    "react-js-utl": "^1.39.0"
+    "react-js-utl": "^1.42.0"
   }
 }
