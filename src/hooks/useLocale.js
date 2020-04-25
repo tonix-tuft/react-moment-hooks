@@ -30,8 +30,11 @@ import { importLocale } from "moment-utl";
 /**
  * Hook to use an asynchronously loaded moment locale.
  *
- * @param {string} locale The locale to load. Check out the "moment/locale/" directory in "node_modules"
- *                        for builtin available locales.
+ * @param {string|*} locale The locale to load. Check out the "moment/locale/" directory in "node_modules"
+ *                          for builtin available locales.
+ *                          If a value which is not a string is passed as parameter, it will be treated as an unknown locale
+ *                          and the "obj.callback" callback will be executed with a "normalizedLocale" parameter
+ *                          set to the Moment's default locale (USA's English, i.e. "en").
  * @param {Object} obj An object with further parameters.
  * @param {(locale: string) => *} obj.callback The callback to execute once the locale has been loaded.
  *                                             Note that the callback will be re-executed only
