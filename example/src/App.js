@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from "react";
 import { useLocale } from "react-moment-hooks";
 import { allSupportedLocales, allSupportedLocalesMap } from "moment-utl";
@@ -12,7 +13,6 @@ function Example({ locale }) {
       // with "normalizedLocale" set to the default Moment's locale (USA's English, i.e. "en"),
       // but only after calling "unknownLocaleCallback" which will always be called before
       // (this is guaranteed by the underlying "moment-utl" package).
-      // eslint-disable-next-line no-console
       console.log(normalizedLocale);
     },
     unknownLocaleCallback: (defaultLocale, locale) => {
@@ -20,12 +20,13 @@ function Example({ locale }) {
       // "defaultLocale" will always be "en" (USA's English).
       // "locale" will be the original locale passed to the hook
       // as first parameter.
-      // eslint-disable-next-line no-console
       console.log(defaultLocale, locale);
     },
     errorCallback: e => {
       // Do something when locale could not be loaded.
-      // eslint-disable-next-line no-console
+      // If this error callback is not given to "useLocale",
+      // then an error will be logged to the console during development (not in production)
+      // if an error occurs.
       console.error(e);
     },
   });

@@ -62,7 +62,21 @@ export default function useLocale(
         );
         callbackRef.current(normalizedLocale);
       } catch (e) {
-        errorCallbackRef.current && errorCallbackRef.current(e, locale);
+        const errorCallbackIsFunction =
+          typeof errorCallbackRef.current === "function";
+
+        /**
+         * @see https://overreacted.io/how-does-the-development-mode-work/
+         */
+        if (process.env.NODE_ENV !== "production") {
+          if (!errorCallbackIsFunction) {
+            // eslint-disable-next-line no-console
+            console.error(
+              `react-moment-hooks - useLocale hook - An error was thrown and an error callback was not provided: ${e}`
+            );
+          }
+        }
+        errorCallbackIsFunction && errorCallbackRef.current(e, locale);
       }
     })();
   }, [locale, callbackRef, unknownLocaleCallbackRef, errorCallbackRef]);

@@ -39,6 +39,9 @@ function Example({ locale }) {
     },
     errorCallback: e => {
       // Do something when locale could not be loaded.
+      // If this error callback is not given to "useLocale",
+      // then an error will be logged to the console during development (not in production)
+      // if an error occurs.
       console.error(e);
     },
   });
