@@ -2,12 +2,18 @@
 
 React hooks for dealing with the Moment.js library.
 
-[![NPM](https://img.shields.io/npm/v/react-moment-hooks.svg)](https://www.npmjs.com/package/react-moment-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-moment-hooks.svg)](https://www.npmjs.com/package/react-moment-hooks)
 
-## Install
+## Installation
 
 ```bash
-npm install --save moment moment-utl react-moment-hooks
+npm install --save react-moment-hooks
+```
+
+Install peer dependencies:
+
+```bash
+npm install --save react react-dom moment moment-utl
 ```
 
 ## Usage
