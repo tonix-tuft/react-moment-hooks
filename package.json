@@ -84,7 +84,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.1.1",
-    "moment": "^2.25.3",
+    "moment": "^2.26.0",
     "moment-utl": "^2.8.0",
     "node-sass": "^4.14.1",
     "onchange": "^6.1.1",
@@ -95,14 +95,14 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.8.2",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "immutable-linked-ordered-map": "^1.9.0",
+    "immutable-linked-ordered-map": "^1.10.0",
     "prop-types": "^15.7.2",
-    "react-js-utl": "^1.46.2"
+    "react-js-utl": "^1.47.2"
   }
 }
